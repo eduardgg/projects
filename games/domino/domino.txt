@@ -1,0 +1,42 @@
+
+_______________________________________________________________________
+
+domino1.py és el programa més desenvolupat, tot i que entremig he
+programat domino2.py i domino3.py, amb dues estratègies una mica
+millorades per al jugador 1. L'objectiu seria fusionar tots els codis
+en un de sol (domino.py) en el que es pugui escollir, a través d'un
+input, quina estratègia farà servir cada jugador, i implementar
+cadascuna d'elles en una funció diferent.
+
+_______________________________________________________________________
+
+Taules succeeix quan es tanca el tauler. En teoria s'haurien de contar
+els punts de cadascú, i guanya qui en té menys. Pendent d'implementar.
+
+El jugador 2 sempre és un dummy, és a dir, tira la primera peça que pot
+(aleatorietzant-ne l'ordre prèviament per no donar preferències).
+
+Provem diferents estratègies per al jugador 1 i n'analitzem l'eficàcia
+a través del percentatge de victòries.
+
+Estratègia 1:
+Com el jugador 2, el jugador 1 tira la primera peça que pot.
+
+    Jugador 1 ---> 43,7%
+    Jugador 2 ---> 43,7%
+    Taules    ---> 12,6%
+
+Estratègia 2:
+El jugador 1 tira la peça amb el nombre que més cops se li repeteix.
+    Jugador 1 ---> 46%
+    Jugador 2 ---> 42,5%
+    Taules    ---> 11,5%
+
+Estratègia 3:
+El jugador 1 dóna preferència a tirar els dobles i, en particular, aquells
+que apareixen en més fitxes de la seva mà. 
+    Jugador 1 ---> 54%
+    Jugador 2 ---> 38%
+    Taules    ---> 8%
+
+_______________________________________________________________________
