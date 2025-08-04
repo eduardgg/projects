@@ -26,7 +26,7 @@ def cyclesPerm(p):
 n = 100
 count = 0
 t = 100000
-# d = Nombre de vegades en què p és un derranjament.
+# d = Nombre de vegades en què p és un desarranjament.
 # (fent servir t = 100000 test cases)
 for i in range(t):
     p = randPerm(n)

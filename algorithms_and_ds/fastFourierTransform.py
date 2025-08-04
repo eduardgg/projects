@@ -1,7 +1,4 @@
-
-# Fast Fourier Transform to compute efficiently the convolution of two polynomials:
-
-from cmath import pi, sin, cos, exp
+from cmath import pi, exp
 
 def FFT(a):
     m = len(a)
@@ -56,3 +53,15 @@ print(conv(v, v))
 # Convolució de dos polinomis diferents
 w = [1,1,1,1,1,1,1]
 print(conv(v, w))
+
+# Potència dels nombres de Catalan:
+cat = [1,1,2,5,14,42,132,429,1430,4862,16796]
+cat2 = conv(cat, cat)
+cat3 = conv(cat, cat2)
+cat4a = conv(cat, cat3)
+cat4b = conv(cat2, cat2)
+print("C1: ", cat)
+print("C2: ", cat2)
+print("C3: ", cat3)
+print("C4 (a): ", cat4a)
+print("C4 (b): ", cat4b)

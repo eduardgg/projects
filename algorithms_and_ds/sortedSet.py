@@ -1,6 +1,7 @@
 import bisect
 
 class SortedSet:
+    
     def __init__(self, iterable=None):
         self._items = []
         if iterable:
@@ -51,23 +52,21 @@ class SortedSet:
         """Remove and return the element at the given index (default: the last element)"""
         return self._items.pop(index)
 
-# Exemples d'ús
-my_set = SortedSet([5, 1, 3, 9])
-print("SortedSet inicial:", my_set)
 
-# Afegir elements
+
+# Test Cases:
+my_set = SortedSet([5, 1, 3, 9])
+print("Sorted set inicial:", my_set)
+
 my_set.add(7)
 print("Després d'afegir 7:", my_set)
 
-# Eliminar elements
 my_set.remove(3)
 print("Després d'eliminar 3:", my_set)
 
-# Accés al primer i últim element
 print("Primer element:", my_set.first())
 print("Últim element:", my_set.last())
 
-# Iterar pel conjunt ordenat
-print("Iterar pel conjunt:")
+print("Iterem pel conjunt:")
 for element in my_set:
     print(element)
